@@ -17,9 +17,9 @@
 \begin{enumerate}
     \item Common Pose Operations:
     \begin{align*}
-        P^A_B \cdot P^B_C &= P^A_C \\
-        \left(P^A_B\right)^{-1} &= P^B_A \\
-        T^A_B \cdot v_A &= v_B \\
+        P^A_C &= P^B_C \cdot P^A_B \\
+        P^B_A &= \left(P^A_B\right)^{-1} \\
+        v_B &= T^A_B \cdot v_A \\
     \end{align*}
 
     \item Position Operations:
@@ -29,9 +29,9 @@
         \end{bmatrix} \quad \begin{bmatrix}
             x \\ y
         \end{bmatrix} \\
-        p^A_B + p^B_C &= p^A_C \\
-        -p^A_B &= p^B_A \\
-        p^A_B + p_A &= p_B \\
+        p^A_C &= p^B_C + p^A_B \\
+        p^B_A &= -p^A_B \\
+        p_B &= p^A_B + p^A \\
     \end{align*}
 
     \item commutative:
@@ -82,7 +82,14 @@
         \end{bmatrix} \\
         &= \begin{bmatrix}
             R_1 R_2 & R_1 t_2 + t_1 \\ 0 & 1
-        \end{bmatrix}
+        \end{bmatrix} \\
+        P &= (R, t) \\
+        (R_1, t_1) \cdot (R_2, t_2) &= (R_1 \cdot R_2, R_1 \cdot t_2 + t_1) \\
+        (R, t) \cdot v &= R \cdot v + t \\
+        (R, t)^{-1} &= (R^{-1}, -R^{-1}t) \\
+        M_1 \cdot M_2 &= M_1 M_2 \\
+        M \cdot v &= M v \\
+        M^{-1} &= M^{-1} \\
     \end{align*}
 
     \item 2D diagrams:
